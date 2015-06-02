@@ -7,9 +7,9 @@
 
 	using Configuration;
 
-	using Data.Items;
-
 	using Diagnostics;
+
+	using Item = Sitecore.Data.Items.Item;
 
 	public class CacheControlManager : ICacheControlManager
 	{
@@ -19,8 +19,8 @@
 			Assert.IsNotNull(httpContext, "httpContext");
 
 
-			var secondsToCache = 0;
-			int.TryParse(item["Output Cache Max Age"], out secondsToCache);
+			int secondsToCache;
+			int.TryParse(item[Data.FieldIds.OutputCacheMaxAge], out secondsToCache);
 
 			var lastUpdated = item.Statistics.Updated;
 			if (lastUpdated > DateTime.Now)

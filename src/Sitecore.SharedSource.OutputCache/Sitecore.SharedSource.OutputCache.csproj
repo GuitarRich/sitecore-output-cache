@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="CacheControlActivator.cs" />
     <Compile Include="CacheControlManager.cs" />
+    <Compile Include="Data\FieldIds.cs" />
     <Compile Include="ICacheControlManager.cs" />
     <Compile Include="Pipelines\RequestBegin\CacheControlProcessor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

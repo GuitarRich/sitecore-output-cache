@@ -2,7 +2,7 @@
 {
 	using System.Web;
 
-	using Data.Items;
+	using Sitecore.Data.Items;
 
 	public class FortisCacheControlManager : ICacheControlManager
 	{
